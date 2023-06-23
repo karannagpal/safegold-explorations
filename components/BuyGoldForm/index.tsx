@@ -61,6 +61,7 @@ function BuyGoldForm() {
             ctaText="Proceed to Buy >>"
             onClickHandler={() => alert("submit")}
             variant={ButtonVariant.GREEN_OUTLINED}
+            customClasses="bg-black text-yellow-200"
           />
         </div>
       </form>
