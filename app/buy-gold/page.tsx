@@ -13,7 +13,7 @@ function page() {
           <h2>Live buy price: ₹{liveGoldRate} /gm</h2>
           <h2>Locker balance: {lockerBalance} grams</h2>
         </div>
-        <BuyGoldForm />
+        <BuyGoldForm liveBuyPrice={liveGoldRate} />
       </div>
       <div className="w-[33%] max-w-2xl border-2 border-sky-200 p-2">FAQs</div>
     </div>
