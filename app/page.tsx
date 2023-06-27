@@ -4,10 +4,9 @@
 import { useEffect, useState } from "react";
 
 import { useTheme } from "next-themes";
-
+import Link from "next/link";
 
 export default function Home() {
-
   const [mounted, setMounted] = useState(false);
 
   const { resolvedTheme, setTheme } = useTheme();
@@ -37,9 +36,19 @@ export default function Home() {
             fugit consectetur tempora iusto voluptatem tempore mollitia labore
             voluptatibus, unde repellat sunt.
           </p>
+          <Link href="/buy-gold" className="text-blue-700 dark:text-blue-400">
+            Buy some gold
+          </Link>
         </div>
         <p>Currently selecte theme: {mounted && resolvedTheme}</p>
-        <button onClick={() => {setTheme(resolvedTheme === "dark" ? "light" : "dark")}}>Change theme</button>
+        <button
+          className="btn"
+          onClick={() => {
+            setTheme(resolvedTheme === "dark" ? "light" : "dark");
+          }}
+        >
+          Change theme
+        </button>
       </main>
     </>
   );
