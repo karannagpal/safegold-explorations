@@ -14,7 +14,7 @@ function Navbar() {
 
   const settings = ["My Profile", "Transactions", "Logout"];
   return (
-    <div className="flex bg-yellow-100 mb-2">
+    <div className="flex bg-[#f7f7f7] dark:bg-[#1b383d] mb-2">
       <h2 className="m-4 px-4">(Logo)</h2>
       {pagesList.map((pageLink) => {
         return (
