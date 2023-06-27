@@ -1,7 +1,22 @@
+"use client";
+
+// react imports
+import { useEffect, useState } from "react";
+
+import { useTheme } from "next-themes";
+
+
 export default function Home() {
+
+  const [mounted, setMounted] = useState(false);
+
+  const { resolvedTheme, setTheme } = useTheme();
+
+  useEffect(() => setMounted(true));
+
   return (
     <>
-      <main className="px-2 container max-w-2xl mx-auto theme-red">
+      <main className="px-2 container max-w-2xl mx-auto">
         <h1>The main heading</h1>
         <h2>level 2 heading</h2>
         <p>
@@ -23,6 +38,8 @@ export default function Home() {
             voluptatibus, unde repellat sunt.
           </p>
         </div>
+        <p>Currently selecte theme: {mounted && resolvedTheme}</p>
+        <button onClick={() => {setTheme(resolvedTheme === "dark" ? "light" : "dark")}}>Change theme</button>
       </main>
     </>
   );
