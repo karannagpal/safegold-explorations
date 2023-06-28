@@ -22,8 +22,10 @@ export default function Home() {
   return (
     <>
       <main className="px-2 container max-w-2xl mx-auto">
-        <h1 className="text-chalk-white">Main heading is in accent color</h1>
-        <h2 className="text-chalk-primary bg-charcoal-primary">level 2 heading, in primary color</h2>
+        <h1 className="text-black">Main heading is in accent color</h1>
+        <h2 className="text-chalk-primary bg-charcoal-primary">
+          level 2 heading, in primary color
+        </h2>
         <p className="text-chalk-secondary bg-charcoal-secondary">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto illum
           dolores molestias minus delectus, ratione nisi inventore esse quasi
@@ -32,7 +34,9 @@ export default function Home() {
         </p>
         <p className="text-skin-accent">some text here</p>
         <div className="border-2 border-white p-2 rounded m-2">
-          <h2 className="text-charcoal-primary bg-chalk-primary">Another sub heading</h2>
+          <h2 className="text-charcoal-primary bg-chalk-primary">
+            Another sub heading
+          </h2>
           <p className="text-charcoal-secondary bg-chalk-secondary">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor et
             dolores expedita, nihil suscipit ipsa adipisci officiis delectus
@@ -44,20 +48,14 @@ export default function Home() {
           </p>
         </div>
         <p>Currently selecte theme: {mounted && theme}</p>
-        <select
-          name="theme"
-          id="theme-select"
-          className="bg-primary border-black border py-1 px-3"
-          onChange={(e) => setTheme(e.currentTarget.value)}
-          value={theme}
+        <button
+          className="btn"
+          onClick={() => {
+            setTheme(theme === "dark" ? "light" : "dark");
+          }}
         >
-          <option value="system">System</option>
-          {themes.map((t) => (
-            <option key={t.name.toLowerCase()} value={t.name.toLowerCase()}>
-              {t.name}
-            </option>
-          ))}
-        </select>
+          Change theme
+        </button>
       </main>
     </>
   );

@@ -1,10 +1,10 @@
+import Link from "next/link";
 import React from "react";
 
 function Navbar() {
   const pagesList = [
-    { title: "Home", link: "/" },
-    { title: "Buy", link: "/" },
-    { title: "Sell", link: "/" },
+    { title: "Buy", link: "/buy-gold" },
+    { title: "Sell", link: "/sell-gold" },
     { title: "Gift", link: "/" },
     { title: "Buy Coins", link: "/" },
     { title: "SIP", link: "/" },
@@ -15,12 +15,14 @@ function Navbar() {
   const settings = ["My Profile", "Transactions", "Logout"];
   return (
     <div className="flex bg-[#f7f7f7] dark:bg-[#1b383d] mb-2">
-      <h2 className="m-4 px-4">(Logo)</h2>
+      <Link href="/">
+        <h2 className="m-4 px-4">SafeGold</h2>
+      </Link>
       {pagesList.map((pageLink) => {
         return (
-          <h4 className="m-4 px-4" key={pageLink.title}>
+          <Link className="m-4 px-4" key={pageLink.title} href={pageLink.link}>
             {pageLink.title}
-          </h4>
+          </Link>
         );
       })}
     </div>
