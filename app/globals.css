@@ -16,7 +16,7 @@
 
 @tailwind utilities;
 
-.theme-blue {
+/* .theme-blue {
   --tw-bg-opacity: 1 !important;
   background-color: blue;
   --tw-text-opacity: 1 !important;
@@ -35,4 +35,10 @@
   background-color: lightpink;
   --tw-text-opacity: 1 !important;
   color: red;
+} */
+
+[data-theme="light"] {
+  --primary-color: "blue";
+  --secondary-color: "cyan";
+  --accent-color: "red";
 }
