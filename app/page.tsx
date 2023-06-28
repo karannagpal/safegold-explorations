@@ -4,13 +4,7 @@
 import { useEffect, useState } from "react";
 
 import { useTheme } from "next-themes";
-
-const themes = [
-  { name: "light" },
-  { name: "dark" },
-  { name: "green" },
-  { name: "brown" },
-];
+import Link from "next/link";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
@@ -22,7 +16,7 @@ export default function Home() {
   return (
     <>
       <main className="px-2 container max-w-2xl mx-auto">
-        <h1 className="text-black">Main heading is in accent color</h1>
+        <h1 className="text-chalk-white">Main heading is in accent color</h1>
         <h2 className="text-chalk-primary bg-charcoal-primary">
           level 2 heading, in primary color
         </h2>
@@ -46,6 +40,9 @@ export default function Home() {
             fugit consectetur tempora iusto voluptatem tempore mollitia labore
             voluptatibus, unde repellat sunt.
           </p>
+          <Link href="/buy-gold" className="text-blue-700 dark:text-blue-400">
+            Buy some gold
+          </Link>
         </div>
         <p>Currently selecte theme: {mounted && theme}</p>
         <button
