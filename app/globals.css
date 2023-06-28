@@ -7,13 +7,46 @@
   h2 {
     @apply text-xl mb-2;
   }
+  .btn {
+    @apply bg-blue-600 text-white font-bold py-2 px-4 rounded;
+  }
+
+  [data-theme="light"] {
+    --primary-color: "blue";
+    --secondary-color: "cyan";
+    --accent-color: "red";
+  }
+
+  [data-theme="dark"] {
+    /* dark theme styles go here */
+    --primary-color: "red";
+    --secondary-color: "pink";
+    --accent-color: "green";
+    background-color: #444444;
+  }
+
+  [data-theme="green"] {
+    /* gruvbox theme styles go here */
+    --primary-color: "green";
+    --secondary-color: "lime";
+    --accent-color: "purple";
+    background-color: olive;
+  }
+
+  [data-theme="brown"] {
+    /* pink theme styles go here */
+    --primary-color: "brown";
+    --secondary-color: "khaki";
+    --accent-color: "blue";
+    background-color: #ff2222;
+  }
 }
 
 @tailwind components;
 
 @tailwind utilities;
 
-.theme-blue {
+/* .theme-blue {
   --tw-bg-opacity: 1 !important;
   background-color: blue;
   --tw-text-opacity: 1 !important;
@@ -32,6 +65,34 @@
   background-color: lightpink;
   --tw-text-opacity: 1 !important;
   color: red;
+} */
+
+[data-theme="light"] {
+  --primary-color: "blue";
+  --secondary-color: "cyan";
+  --accent-color: "red";
 }
 
+[data-theme="dark"] {
+  /* dark theme styles go here */
+  --primary-color: "red";
+  --secondary-color: "pink";
+  --accent-color: "green";
+  background-color: #444444;
+}
 
+[data-theme="green"] {
+  /* green theme styles go here */
+  --primary-color: "green";
+  --secondary-color: "lime";
+  --accent-color: "purple";
+  background-color: olive;
+}
+
+[data-theme="brown"] {
+  /* pink theme styles go here */
+  --primary-color: "brown";
+  --secondary-color: "khaki";
+  --accent-color: "blue";
+  background-color: #ff2222;
+}
