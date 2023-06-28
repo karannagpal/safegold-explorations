@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="px-2 container max-w-2xl mx-auto">
+      <main className="px-2 container max-w-5xl mx-auto">
         <h1 className="text-chalk-white">Main heading is in accent color</h1>
         <h2 className="text-chalk-primary bg-charcoal-primary">
           level 2 heading, in primary color
@@ -44,14 +44,14 @@ export default function Home() {
             Buy some gold
           </Link>
         </div>
-        <p>Currently selecte theme: {mounted && theme}</p>
+        <p className="mt-4">Currently selecte theme: {mounted && theme}</p>
         <button
           className="btn"
           onClick={() => {
             setTheme(theme === "dark" ? "light" : "dark");
           }}
         >
-          Change theme
+          Toggle theme
         </button>
       </main>
     </>
