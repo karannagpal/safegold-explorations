@@ -13,3 +13,8 @@ export interface ButtonProps {
   variant?: ButtonVariant;
   customClasses?: string;
 }
+
+export interface GeolocationPosition {
+  coords: any;
+  timestamp: number;
+}
