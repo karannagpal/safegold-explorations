@@ -3,8 +3,6 @@
 // react imports
 import { useEffect, useState } from "react";
 
-import { useTheme } from "next-themes";
-
 const options = {
   enableHighAccuracy: true,
   timeout: 5000,
@@ -21,13 +19,8 @@ interface GeolocationPosition {
 }
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
   const [geoData, setGeoData] = useState<GeolocationPosition>();
   const [geoStatus, setGeoStatus] = useState("");
-
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => setMounted(true));
 
   const success = (pos: GeolocationPosition) => {
     setGeoData(pos);
@@ -84,15 +77,6 @@ export default function Home() {
             time stamp: <b>{geoData && getDate(geoData.timestamp)}</b>
           </div>
         </div>
-        <p className="mt-4">Currently selected theme: {mounted && theme}</p>
-        <button
-          className="btn"
-          onClick={() => {
-            setTheme(theme === "dark" ? "light" : "dark");
-          }}
-        >
-          Toggle theme
-        </button>
       </main>
     </>
   );

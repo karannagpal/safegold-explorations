@@ -1,17 +1,9 @@
 "use client";
 
-// react imports
-import { useEffect, useState } from "react";
-
-import { useTheme } from "next-themes";
+// nextjs imports
 import Link from "next/link";
 
 export default function Home() {
-  const [mounted, setMounted] = useState(false);
-
-  const { theme, setTheme } = useTheme();
-
-  useEffect(() => setMounted(true));
 
   return (
     <>
@@ -44,15 +36,6 @@ export default function Home() {
             Buy some gold
           </Link>
         </div>
-        <p className="mt-4">Currently selecte theme: {mounted && theme}</p>
-        <button
-          className="btn"
-          onClick={() => {
-            setTheme(theme === "dark" ? "light" : "dark");
-          }}
-        >
-          Toggle theme
-        </button>
       </main>
     </>
   );
