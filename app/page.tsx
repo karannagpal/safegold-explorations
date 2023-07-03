@@ -3,12 +3,19 @@
 // nextjs imports
 import Link from "next/link";
 
-export default function Home() {
+// custom components imports
+import InfoCard from "@/components/InfoCard";
 
+export default function Home() {
   return (
     <>
-      <main className="px-2 container max-w-5xl mx-auto">
-        <h1 className="text-chalk-white">Main heading is in accent color</h1>
+      <main className="bg-chalk-background px-2 container max-w-5xl mx-auto">
+        <div className="my-2">
+          <h2 className="text-chalk-primary">Common Components</h2>
+          <InfoCard />
+        </div>
+
+        <h1 className="text-chalk-white">Main heading</h1>
         <h2 className="text-chalk-primary bg-charcoal-primary">
           level 2 heading, in primary color
         </h2>
