@@ -11,7 +11,7 @@
     @apply bg-blue-600 text-white font-bold py-2 px-4 rounded;
   }
   .info-card {
-    @apply bg-chalk-card-background border border-chalk-card-border p-6 shadow shadow-chalk-card-shadow rounded-lg max-w-[380px];
+    @apply bg-chalk-card-background bg-origin-border border border-chalk-card-border p-6 shadow-card shadow-chalk-card-shadow rounded-lg max-w-[336px];
   }
   .card-heading3 {
     @apply text-base font-bold text-center text-chalk-card-heading3 pb-6;
@@ -27,3 +27,10 @@
 @tailwind components;
 
 @tailwind utilities;
+
+/* should work only on dark mode */
+.info-card {
+  background-image: linear-gradient(#363C3D, #363C3D),
+    linear-gradient(6.66deg, #C9A775 2.93%, rgba(201, 167, 117, 0.5) 98.23%);
+  background-clip: padding-box, border-box;
+}

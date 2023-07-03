@@ -24,7 +24,7 @@ function Navbar() {
 
   const settings = ["My Profile", "Transactions", "Logout"];
   return (
-    <div className="sm:block md:flex bg-[#6c9396] mb-2 p-4">
+    <div className="sm:block md:flex bg-[#6c9396] p-4">
       <Link href="/">
         <h2 className="m-2 px-4">SafeGold</h2>
       </Link>

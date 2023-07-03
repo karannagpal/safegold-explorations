@@ -9,7 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-
+      boxShadow: {
+        card: "0px 1px 1px 0px",
+      },
       colors: {
         transparent: "transparent",
         chalk: {
@@ -23,8 +25,8 @@ module.exports = {
             border: "white",
             shadow: "rgba(0, 0, 0, 0.25)",
             heading3: "#414A4F",
-            heading5: "#333333"
-          }
+            heading5: "#333333",
+          },
         },
         charcoal: {
           // all dark tones here
@@ -37,8 +39,8 @@ module.exports = {
             border: "#C9A775",
             shadow: "transparent",
             heading3: "#C9A775",
-            heading5: "#FFFFFF"
-          }
+            heading5: "#FFFFFF",
+          },
         },
       },
     },
