@@ -4,7 +4,7 @@ function InfoCard() {
   const copyText = "Why you must buy 24K Digital gold?";
 
   return (
-    <div className="info-card">
+    <div className="info-card dark:info-card-dark">
       <div className="card-heading3">{copyText}</div>
       <div className="flex justify-between">
         <div>

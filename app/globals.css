@@ -28,9 +28,9 @@
 
 @tailwind utilities;
 
-/* should work only on dark mode */
-.info-card {
-  background-image: linear-gradient(#363C3D, #363C3D),
-    linear-gradient(6.66deg, #C9A775 2.93%, rgba(201, 167, 117, 0.5) 98.23%);
+/* TODO: should work only on dark mode */
+.info-card-dark {
+  background-image: linear-gradient(#363c3d, #363c3d),
+    linear-gradient(6.66deg, #c9a775 2.93%, rgba(201, 167, 117, 0.5) 98.23%);
   background-clip: padding-box, border-box;
 }
