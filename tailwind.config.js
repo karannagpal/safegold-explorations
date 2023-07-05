@@ -78,6 +78,12 @@ module.exports = {
             700: "#666666",
             900: "#333333",
           },
+          golden: {
+            500: "#D99A32",
+          },
+          green: {
+            900: "#084243",
+          },
           status: {
             success: "#29C13B",
             failure: "#FF0000",

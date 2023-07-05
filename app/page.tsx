@@ -5,6 +5,7 @@ import Link from "next/link";
 
 // custom components imports
 import InfoCard from "@/components/InfoCard";
+import StickyCta from "@/components/StickyCta";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
           <div className="my-2">
             <h2 className="text-chalk-primary">Common Components</h2>
             <InfoCard />
+          </div>
+          <div className="my-2 p-6 bg-sg-dark-background">
+            <StickyCta />
           </div>
 
           <h1 className="text-chalk-white">Main heading</h1>
