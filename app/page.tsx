@@ -9,7 +9,7 @@ import InfoCard from "@/components/InfoCard";
 export default function Home() {
   return (
     <>
-      <div className="bg-chalk-background pt-4">
+      <div className="bg-sg-light-background pt-4">
         <main className="px-2 container max-w-5xl mx-auto">
           <div className="my-2">
             <h2 className="text-chalk-primary">Common Components</h2>
