@@ -6,6 +6,7 @@ import Link from "next/link";
 // custom components imports
 import InfoCard from "@/components/InfoCard";
 import StickyCta from "@/components/StickyCta";
+import TimerCard from "@/components/TimerCard";
 
 export default function Home() {
   return (
@@ -17,7 +18,12 @@ export default function Home() {
             <InfoCard />
           </div>
           <div className="my-2 p-6 bg-sg-dark-background">
+            <h2 className="text-white">Sticky CTA</h2>
             <StickyCta />
+          </div>
+          <div className="my-2 p-6 bg-sg-dark-background">
+            <h2 className="text-white">Timer Card</h2>
+            <TimerCard />
           </div>
 
           <h1 className="text-chalk-white">Main heading</h1>
