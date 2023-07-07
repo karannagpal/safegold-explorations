@@ -26,7 +26,10 @@
     @apply bg-gradient-to-r from-sg-dark-primary-500 to-sg-dark-primary;
   }
   .cta-inset-shadow {
-    @apply shadow-[0_4px_4px_0px_rgba(255,255,255,0.25)_inset];
+    @apply shadow-[0_4px_4px_0_rgba(255,255,255,0.25)_inset];
+  }
+  .inset-shadow-dark {
+    @apply shadow-[0_4px_4px_0_rgba(0,0,0,0.25)_inset];
   }
 }
 

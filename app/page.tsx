@@ -9,6 +9,10 @@ import StickyCta from "@/components/StickyCta";
 import TimerCard from "@/components/TimerCard";
 
 export default function Home() {
+  const now = new Date();
+  const deadline = new Date();
+  deadline.setMinutes(now.getMinutes() + 5)
+
   return (
     <>
       <div className="bg-sg-light-background pt-4">
@@ -23,7 +27,7 @@ export default function Home() {
           </div>
           <div className="my-2 p-6 bg-sg-dark-background">
             <h2 className="text-white">Timer Card</h2>
-            <TimerCard />
+            <TimerCard deadline={deadline} />
           </div>
 
           <h1 className="text-chalk-white">Main heading</h1>

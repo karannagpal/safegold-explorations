@@ -1,4 +1,5 @@
-import Checkbox from "@/assets/svg/Checkbox";
+// import Checkbox from "@/assets/svg/Checkbox";
+import FilledChevron from "@/assets/svg/FilledChevron";
 
 function StickyCta() {
   return (
@@ -10,7 +11,8 @@ function StickyCta() {
         <div className="flex justify-around p-6 pt-3">
           <div className="flex flex-col justify-around">
             <div className="mr-6">
-              <Checkbox custom_class="fill-sg-dark-secondary-300" />
+              {/* <Checkbox custom_class="fill-sg-dark-secondary-300" /> */}
+              <FilledChevron custom_class="fill-sg-dark-secondary-300" secondary_color="white" />
             </div>
           </div>
           <div className="text-xs w-72 text-sg-dark-grey-500">
